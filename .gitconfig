@@ -1,0 +1,32 @@
+[user]
+	name = Noriaki UCHIYAMA
+	email = uchiyama.noriaki@gmail.com
+[color]
+	ui = auto
+        status = auto
+        branch = auto
+        interactive = auto
+        log = auto
+[color "branch"]
+        current = yellow reverse
+        local = yellow
+        remote = green
+[color "diff"]
+        meta = yellow bold
+        frag = magenta bold
+        old = red bold
+        new = green bold
+[color "status"]
+        added = yellow
+        changed = green
+        untracked = cyan
+[core]
+        editor = emacs
+        pager = nkf -s | LESSCHARSET=utf-8 less
+[alias]
+        st = status
+        ci = commit
+        br = branch
+        co = checkout
+        df = diff
+        lg = log -p

@@ -1,0 +1,33 @@
+escape ^Zz
+defencoding UTF-8
+autodetach on
+defscrollback 1024
+startup_message off
+
+#hardstatus alwayslastline "%`%-w%{=b bw}%n %t%{-}%+w"
+
+## http://iandeth.dyndns.org/mt/ian/archives/000646.html#s1
+## http://q.hatena.ne.jp/1134693287
+shelltitle "$ |zsh"
+hardstatus alwayslastline "%`%-w%{=b bw}%n %t%{-}%+w %= %{=b wb}%y/%m/%d %{=b wb}%c"
+
+## http://frexx.de/xterm-256-notes/
+# erase background with current bg color
+defbce "on"
+# do not use 'screen-bce'
+#term xterm-256color
+
+## http://www.geocities.co.jp/SiliconValley-PaloAlto/2454/screen.html
+bind o other
+bind ' ' windowlist -b
+
+## http://d.hatena.ne.jp/aircastle/20080501/1209641600
+markkeys h=^b:l=^f:$=^e:^d=^v:^D=^V
+
+## http://subtech.g.hatena.ne.jp/secondlife/20051216/1134741917
+bind -c REGION 2 split
+bind -c REGION 1 only
+bind -c REGION 0 remove
+bind -c REGION o focus
+bind -c REGION \^ resize
+bind x command -c REGION

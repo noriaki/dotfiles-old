@@ -1,0 +1,1 @@
+/home/noriaki/.emacs.d
