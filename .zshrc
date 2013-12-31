@@ -33,7 +33,6 @@ setopt SHARE_HISTORY
 # autoload -U colors
 #colors
 
-
 #
 # http://www.cozmixng.org/~kou/linux/zsh
 #
@@ -54,7 +53,6 @@ function history-all { history -E 1 }
 
 # autoload -U colors
 #colors
-
 
 #
 # http://www.cozmixng.org/~kou/linux/zsh
@@ -121,7 +119,8 @@ alias -g H='| head'
 alias -g T='| tail'
 alias -g G='| grep'
 
-alias sudo="env PATH=${PATH}:/sbin:/usr/sbin:/usr/local/sbin \sudo"
+#alias sudo="env PATH=${PATH}:/sbin:/usr/sbin:/usr/local/sbin:/usr/local/bin \sudo"
+alias sudo="sudo -E "
 
 #
 # http://www.jmuk.org/diary/2007/02/23/2
@@ -147,7 +146,7 @@ export LANG=ja_JP.UTF-8
 export EDITOR=emacs
 export GIT_EDITOR=emacs
 export GIT_PAGER=less
-alias gemi="sudo gem i --no-ri --no-rdoc --verbose --both"
+alias gemi="gem i --no-ri --no-rdoc --verbose --both"
 alias restart_rails="touch tmp/restart.txt"
 alias less="less -R"
 alias tail="tail -n 100 -F"
@@ -199,7 +198,6 @@ function chpwd()
     ls;
 }
 
-
 #  http://www.gentei.org/~yuuji/rec/pc/intro-screen.html
 #title () {echo -n "\e]0;$*\a"}
 
@@ -217,5 +215,15 @@ function chpwd()
 #  http://d.hatena.ne.jp/visual-photo-search/20100419/1271691039
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
 
+# RVM
+#  http://d.hatena.ne.jp/ruedap/20110112/ruby_version_manager_rvm_install
+source "$HOME/.rvm/scripts/rvm"
+source ~/.profile
+
+# nodebrew
+#  http://d.hatena.ne.jp/Jxck/20120224/1330035058
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 ### end of file
+
 
