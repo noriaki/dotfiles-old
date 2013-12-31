@@ -32,3 +32,14 @@
 (add-to-list 'completion-ignored-extensions ".git/")
 ;; 補完は ignore-case で。
 (setq completion-ignore-case t)
+
+;; hide menu-bar
+(menu-bar-mode -1)
+
+;; ステータスラインに時間を表示する
+(progn
+  (setq display-time-24hr-format t)
+  (setq display-time-format "%Y-%m-%d(%a) %H:%M")
+  (setq display-time-day-and-date t)
+  (setq display-time-interval 30)
+  (display-time))
