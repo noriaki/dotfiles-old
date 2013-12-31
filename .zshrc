@@ -45,27 +45,6 @@ SAVEHIST=10000000
 
 function history-all { history -E 1 }
 
-## automatically decide when to page a list of completions
-#LISTMAX=0
-
-## disable mail checking
-#MAILCHECK=0
-
-# autoload -U colors
-#colors
-
-#
-# http://www.cozmixng.org/~kou/linux/zsh
-#
-# Emacs style key binding
-bindkey -e
-
-HISTFILE=~/.zsh_history
-HISTSIZE=10000000
-SAVEHIST=10000000
-
-function history-all { history -E 1 }
-
 autoload -U colors
 colors
 
@@ -227,3 +206,5 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 ### end of file
 
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
